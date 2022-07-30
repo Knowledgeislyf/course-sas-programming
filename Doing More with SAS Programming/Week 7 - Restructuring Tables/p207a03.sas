@@ -28,3 +28,11 @@ run;
 *     What changes in the results?                        *;
 *        var Height Weight;                               *;
 ***********************************************************;
+
+proc print data=sashelp.class;
+run;
+
+proc transpose data=sashelp.class out=class_t;
+	ID Name;
+	var Height Weight;
+run;
